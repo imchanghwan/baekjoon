@@ -4,19 +4,16 @@
 
 using namespace std;
 
-struct Meet { // 회의 시작시간과 끝나는 시간을 저장하는 구조체
-	unsigned long int start;
-	unsigned long int finish;
-};
-
 /*
-시간의 범위는 0부터 2의 31제곱-1 이므로 범위가 2의 32제곱까지인 unsigned long int를 사용해야겠다는 생각
+문제
+시간의 범위는 0부터 2의 31제곱-1 이므로 범위가 2의 32제곱까지인 unsigned long int를 사용해야겠다
 문제 해결 아이디어
 회의가 가장 먼저 끝나고 시작 하는 회의를 연결하면 된다고 생각함. 시작 시간은 같아도 끝나는 시간이 더 빠른 회의를 우선적으로 선택
 시작시간과 끝나는 시간이 겹쳐도 됨.
 
 시간복잡도는 O(n) 이다.
 
+문제 해결 아이디어
 코드는 끝나는시간을 기준으로 오름차순 정렬해서
 시작시간이 끝나는 시간보다 더 크거나 같은 시간을 비교 반복한다.
 */
@@ -29,6 +26,11 @@ struct Meet { // 회의 시작시간과 끝나는 시간을 저장하는 구조�
 10 10
 1 10
 */
+
+struct Meet { // 회의 시작시간과 끝나는 시간을 저장하는 구조체
+	unsigned long int start;
+	unsigned long int finish;
+};
 
 bool cmp(Meet &a, Meet &b) // sort함수의 구조체 정렬을 하기위한 비교함수
 {
