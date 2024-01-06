@@ -29,7 +29,7 @@ int main()
 		cin >> x;
 		dis.push_back(x); // 벡터 초기화
 	}
-	vector<int> city_cost; // 도시당 기름 가격 벡터
+	vector<long long int> city_cost; // 도시당 기름 가격 벡터
 	for (int i = 0; i < n; i++) { 
 		long long int x;
 		cin >> x;
