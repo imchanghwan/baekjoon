@@ -64,9 +64,8 @@ int main()
 
 
 	for (int i = 0; i < digit.size(); i++) {
-		if (digit[i] != 0) {
-			res += digit[i] * (num--); // 자릿수가 높은 순대로 9, 8, 7.. 곱해준다.
-		}
+		if (digit[i] == 0) break; // 0 나오면 반복문 종료
+		res += digit[i] * (num--); // 자릿수가 높은 순대로 9, 8, 7.. 곱해준다.
 	}
 
 	cout << res << endl;
