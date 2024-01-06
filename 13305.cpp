@@ -30,7 +30,7 @@ struct Meet { // 회의 시작시간과 끝나는 시간을 저장하는 구조�
 1 10
 */
 
-bool cmp(Meet a, Meet b) // sort함수의 구조체 정렬을 하기위한 비교함수
+bool cmp(Meet &a, Meet &b) // sort함수의 구조체 정렬을 하기위한 비교함수
 {
 	if (a.finish != b.finish) return a.finish < b.finish;
 	else return a.start < b.start;
