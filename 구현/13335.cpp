@@ -43,7 +43,8 @@ int main()
 		cin >> x;
 		truck.push_back(x);
 	}
-	vector<pair<int,int>> bridge; // 무게, 시간
+	
+	vector<pair<int,int>> bridge; // 다리에 올라간 트럭의 무게, 올라갔을 때 시간
 	int sum = 0; // 다리위의 트럭 무게 합
 	int time = 0; // 단위시간
 	while (!(truck.empty() && bridge.empty()))
