@@ -19,11 +19,12 @@ using namespace std;
 int 범위를 넘어가기에 long long int로 해주었다.
 */
 
+int n;
+vector<long long int> dis; // 도시 거리 벡터
+
 int main()
 {
-	int n;
 	cin >> n;
-	vector<long long int> dis; // 도시 거리 벡터
 	for (int i = 0; i < n - 1; i++) {
 		long long int x;
 		cin >> x;
