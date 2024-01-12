@@ -88,7 +88,6 @@ int main()
 			}
 		}
 	}
-
 	
 	// 결과값 출력
 	for (int i = 0; i < r; i++) {
