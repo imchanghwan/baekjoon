@@ -22,7 +22,6 @@ using namespace std;
 n*w+1 = 10^5 + 1 < 10^8 이라 1초미만이다.
 */
 
-
 int n, w, L; // 트럭의 수, 다리의 길이, 다리의 최대하중
 vector<int> truck;
 
