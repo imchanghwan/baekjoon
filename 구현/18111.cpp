@@ -61,8 +61,10 @@ int main()
 				inventory -= h - v[i];
 			}
 		}
-		if (inventory >= 0)렬 
+		if (inventory >= 0) res.push_back(make_pair(sec, h));
+	}
+	// 소요시간을 오름차순으로 정렬 시간이 같으면 높이를 내림차순으로 정렬
 	sort(res.begin(), res.end(), [](pair<int, int>a, pair<int, int>b) { return a.first == b.first ? a.second > b.second : a.first < b.first; });
-
+	// 소요시간을 최소, 높이를 최대인 결과를 출력
 	cout << res[0].first << " " << res[0].second << endl;
 }
