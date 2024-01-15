@@ -5,13 +5,20 @@
 using namespace std;
 
 /*
-블럭을 쌓는데 1초
-파는데 2초 걸림
+문제 풀이 아이디어 
 
-n*m에서 최소 높이부터 최대높이까지 반복
-1. 최소높이까지 다 깎기
-2. 그 사이의 높이까지 깎고 쌓기 깎으면 인벤토리에 블럭 수 증가, 쌓으면 블럭 수 감소, 블럭 수가 적으면 안됨
-3. 최대높이까지 다 쌓기 블럭 수가 적으면 안됨
+높이가 큰 순으로 정렬
+
+n*m에서 최소 높이부터 최대높이까지 h 반복
+높이가 h보다 크면 블럭 제거, 인벤토리 블럭 수 증가, 소요시간=2초 * (높이 - h)
+높이가 h보다 작으면 블럭 설치, 인벤토리 블럭 수 감소, 소요시간=1초 * (h - 높이)
+인벤토리 블럭 수 가 적으면 종료
+
+시간 복잡도
+n*m 최대는 500*500 = 25만
+정렬함수 sort는 NlogN
+최소 높이부터 최대높이까지 다 있으면 256 * 500 * 500 = 6.4*10^6 < 10^8 이다. 
+N+NlogN는 O(NlogN)이다.
 */
 
 int n, m, b; // i,j 좌표, 인벤토리 블럭 수
@@ -54,9 +61,7 @@ int main()
 				inventory -= h - v[i];
 			}
 		}
-		if (inventory >= 0) res.push_back(make_pair(sec, h));
-	}
-
+		if (inventory >= 0)렬 
 	sort(res.begin(), res.end(), [](pair<int, int>a, pair<int, int>b) { return a.first == b.first ? a.second > b.second : a.first < b.first; });
 
 	cout << res[0].first << " " << res[0].second << endl;
