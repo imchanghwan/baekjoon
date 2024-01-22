@@ -42,7 +42,7 @@ bool dfs(int x, int y)
 int main()
 {
 	while (true) {
-		graph.clear(); // vector를 빈 vector로 초기화
+	    graph.clear(); // vector를 빈 vector로 초기화
         result = 0; // result 출력 값도 0으로 초기화
         
 		cin >> w >> h;
