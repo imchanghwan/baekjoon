@@ -34,7 +34,6 @@ int main()
 
 	int result = 0; // 출력값
 
-
 	// 랜선의 최대 길이는 2^31-1 로 인트형 최댓값이고, mid값 계산중 오버플로우가 일어날 수 있다. unsigned int형은 int의 두배가 된다.
 	int start = 1; // 최소 1
 	int end = *max_element(v.begin(), v.end()); // 랜선 최대값
