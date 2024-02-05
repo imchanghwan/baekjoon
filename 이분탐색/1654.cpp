@@ -13,9 +13,9 @@ using namespace std;
 같거나 크면 결과값을 mid값으로 저장하고 start값을 올려 N개를 만들 수 있는 랜선의 최대 길이를 구한다.
 
 시간 복잡도
-이분탐색 O(logN) N=10^6, logN=6
-랜선길이 순차탐색 O(K) K=10000
-총 시간복잡도 O(KlogN) KlogN=60000
+랜선길이 이분탐색 O(logN) N=2^31, logN=31
+랜선개수 순차탐색 O(K) K=1000000
+총 시간복잡도 O(KlogN) KlogN=31000000
 */
 
 int k, n;
